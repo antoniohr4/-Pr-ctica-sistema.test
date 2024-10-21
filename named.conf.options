@@ -1,0 +1,28 @@
+acl trusted {
+    192.168.57.0/24;
+	127.0.0.0/8;
+};
+
+acl listen-addresses {
+	192.168.57.103;
+	192.168.57.102;
+	127.0.0.1;
+};
+
+options {
+    directory "/var/cache/bind";
+
+    allow-query { trusted; };     // Permitir consultas solo desde la ACL definida
+
+    forwarders {
+            208.67.222.222;           // Configurar reenvío a OpenDNS
+    };
+
+    listen-on port 53 { listen-addresses; };
+
+    recursion yes;                 // Habilitar consultas recursivas
+    allow-recursion { trusted; };  // Permitir recursión solo a los clientes en la ACL
+
+    dnssec-validation yes;         // Activar la validación DNSSEC
+};
+
