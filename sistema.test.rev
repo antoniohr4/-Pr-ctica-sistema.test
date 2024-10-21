@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 ;
 ;57.168.192.in-addr.arpa.
 ;
+=======
+;57.168.192.in-addr.arpa.
+>>>>>>> b10a46123b4d01771d68bad9c7fb49a84b94f110
 
 $TTL	86400
 $ORIGIN 57.168.192.in-addr.arpa.
