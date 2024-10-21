@@ -17,11 +17,7 @@ ns1		IN		CNAME	tierra
 ns2		IN		CNAME	venus
 
 ; Mail server
-<<<<<<< HEAD
 @			IN		MX		10 marte
-=======
-@		IN		MX		10 marte
->>>>>>> b10a46123b4d01771d68bad9c7fb49a84b94f110
 
 ; Servers directions
 tierra		IN		A		192.168.57.103
